@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Sewa Kendaraan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white text-center">
+                <h1>Aplikasi Sewa Kendaraan</h1>
+            </div>
+            <div class="card-body">
+                <form id="rentalForm" action="mailto:hendra_nz@yahoo.com" method="POST" enctype="text/plain">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama Pelanggan</label>
+                        <input type="text" id="name" name="Nama" class="form-control" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="Telepon" class="form-control" placeholder="Masukkan nomor telepon" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="Email" class="form-control" placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="days" class="form-label">Jumlah Hari Sewa</label>
+                        <input type="number" id="days" name="Hari Sewa" class="form-control" min="1" placeholder="Masukkan jumlah hari" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="kilometers" class="form-label">Jarak Tempuh (km)</label>
+                        <input type="number" id="kilometers" name="Jarak Tempuh" class="form-control" min="0" placeholder="Masukkan jarak tempuh" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="insurance" class="form-label">Pilihan Asuransi</label>
+                        <select id="insurance" name="Asuransi" class="form-select" required>
+                            <option value="Paket 1">Paket 1: 25 CHF per hari (Tanggungan hingga 500 CHF)</option>
+                            <option value="Paket 2">Paket 2: 50 CHF per hari (Tanggungan 0 CHF)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="extraKmAgreed" class="form-label">Apakah Kilometer Tambahan Disepakati di Awal?</label>
+                        <select id="extraKmAgreed" name="Kilometer Tambahan" class="form-select" required>
+                            <option value="Ya">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Kirim Pemesanan</button>
+                </form>
+            </div>
+            <div class="card-footer bg-light">
+                <div id="result" class="alert alert-info" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
